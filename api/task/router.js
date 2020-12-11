@@ -16,24 +16,32 @@ const forNpmTest = (req, res, next) => {
 router.get('/', (req, res) => {
     console.log(req.body)
     Task.getAll()
-        .then(task => {   
-                res.status(200).json(task)
-    })
+    .then(task => {
+        task.forEach(tas => {
+            const bool = tas.completed
+            const newBool = bool ? true:false
+            tas.completed = newBool
+        })
+        res.status(200).json(task)
+        })
     .catch(err => res.status(500).json({message:err.message}))
 })
 router.post('/', forNpmTest, (req, res) => {
     Task.create(req.body)
     .then(task => {
         if(task){
-
+            const bool = req.body.completed
+             const newBool = bool ? true:false
+            req.body.completed = newBool
             res.status(201).json(req.body)
         }
         else{
-            res.status(404).json({message:'tets'})  
+            res.status(400).json({message:'no task!!'})  
         }
     })
     .catch(err => res.status(500).json({message:err.message}))
 })
+
 
 
 

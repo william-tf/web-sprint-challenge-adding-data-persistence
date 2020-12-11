@@ -2,9 +2,12 @@
 
 const db = require('../../data/dbConfig')
 
+const boolean = 0
+const transBoolean = boolean ? true: false
+
 
 function getAll(){
-return db('projects')
+        return db('projects')
 }
 
 function create(project){
@@ -13,7 +16,13 @@ function create(project){
     .insert(project)
 }
 
+function getById(id) {
+    return db("projects").where({id});
+  }
+
+
 module.exports = {
     getAll,
-    create
+    create,
+    getById
 }

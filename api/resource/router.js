@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
         if(resource){
             res.status(201).json(req.body)
         } else{
-            res.status(404).json({message:'tets'})
+            res.status(404).json({message:'no resource dang'})
         }
     })
     .catch(err => res.status(500).json({message:err.message}))
