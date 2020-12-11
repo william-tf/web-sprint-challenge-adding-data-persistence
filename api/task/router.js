@@ -33,7 +33,7 @@ router.post('/', forNpmTest, (req, res) => {
             const boolean = req.body.completed
              const transBoolean = boolean ? true:false
             req.body.completed = transBoolean
-            res.status(201).json(req.body.completed)
+            res.status(201).json(req.body)
         }
         else{
             res.status(400).json({message:'no task!!'})  

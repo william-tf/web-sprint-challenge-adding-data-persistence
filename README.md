@@ -46,14 +46,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between Relational Databases and SQL.
 
-
+They are essentially the same thing.  They use tables to order their information
 
 2. Why do tables need a Primary Key?
 
-So that each column
+So that each column and each table has something it can reference
 
 3. What is the name given to a table column that references the Primary Key on another table?
+
+Foreign Key
+
 4. What do we need in order to have a _many to many_ relationship between two tables?
+
+We need to have a table link in order for it to work.
 
 ## Instructions
 
