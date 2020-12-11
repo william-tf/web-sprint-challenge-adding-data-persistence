@@ -4,7 +4,7 @@
   "description": "Data Persistence Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand --silent",
+    "test": "NODE_ENV=testing jest --watch --verbose --runInBand --silent",
     "server": "nodemon index.js"
   },
   "repository": {
