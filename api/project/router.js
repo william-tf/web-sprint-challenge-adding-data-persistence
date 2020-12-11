@@ -43,9 +43,9 @@ router.post('/', (req, res) => {
     Project.create(req.body)
     .then(proj => {
         if(proj){
-            const bool = req.body.completed
-            const newBool = bool ? true:false
-            req.body.completed = newBool
+            const boolean = req.body.completed
+            const transBoolean = boolean ? true:false
+            req.body.completed = transBoolean
             res.status(201).json(req.body)
         }else{
             res.status(400).json({message:'no project wow'})

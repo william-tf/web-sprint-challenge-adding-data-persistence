@@ -30,9 +30,9 @@ router.post('/', forNpmTest, (req, res) => {
     Task.create(req.body)
     .then(task => {
         if(task){
-            const bool = req.body.completed
-             const newBool = bool ? true:false
-            req.body.completed = newBool
+            const boolean = req.body.completed
+             const transBoolean = boolean ? true:false
+            req.body.completed = transBoolean
             res.status(201).json(req.body)
         }
         else{
