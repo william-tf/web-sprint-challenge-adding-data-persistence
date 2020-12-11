@@ -1,4 +1,7 @@
 // start your server here
-const server = require('')
+const server = require('./api/server')
+const PORT = 6000
 
-console.log('test for codegrade')
+server.listen(PORT, () => {
+    console.log(`this server is listening on ${PORT}`)
+})
