@@ -18,9 +18,9 @@ router.get('/', (req, res) => {
     Task.getAll()
     .then(task => {
         task.forEach(tas => {
-            const bool = tas.completed
-            const newBool = bool ? true:false
-            tas.completed = newBool
+            const boolean = tas.completed
+            const transBoolean = boolean ? true:false
+            tas.completed = transBoolean
         })
         res.status(200).json(task)
         })

@@ -28,9 +28,9 @@ router.get('/', (req, res) => {
         Project.getAll()
         .then(pro => {
         pro.forEach(project => {
-            const bool = project.completed
-            const newBool = bool ? true:false
-            project.completed = newBool
+            const boolean = project.completed
+            const transBoolean = boolean ? true:false
+            project.completed = transBoolean
         })
         res.status(200).json(pro)
         })
